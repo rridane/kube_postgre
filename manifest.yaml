@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgre
+  labels:
+    app: postgre
+spec:
+  template:
+    metadata:
+      labels:
+        app: postgre
+      spec:
+        containers:
+        - name: postgres
+          image: postgres
+  replicas: 3
+  selector:
+    matchLabels:
+      app: postgres
+  serviceName: mysql-h
