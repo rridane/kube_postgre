@@ -9,10 +9,10 @@ spec:
     metadata:
       labels:
         app: postgre
-      spec:
-        containers:
-        - name: postgres
-          image: postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres
   replicas: 3
   selector:
     matchLabels:
