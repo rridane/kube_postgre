@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: postgre
+  name: postgres
   labels:
-    app: postgre
+    app: postgres
 spec:
   template:
     metadata:
       labels:
-        app: postgre
+        app: postgres
     spec:
       containers:
       - name: postgres
